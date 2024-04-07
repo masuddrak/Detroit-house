@@ -1,6 +1,6 @@
 [
     {
-        "image": "relevant_image_url.jpg",
+        "image": "https://i.ibb.co/nLqhrxp/pexels-thanhhoa-tran-1488267.jpg",
         "estate_title": "Luxury Office Building in Downtown",
         "id": "123456",
         "segment_name": "Office buildings",
@@ -17,7 +17,7 @@
         ]
     },
     {
-        "image": "relevant_image_url.jpg",
+        "image": "https://i.ibb.co/kBt4HqC/pexels-jimmy-chan-1458457.jpg",
         "estate_title": "Spacious Retail Space in Shopping Mall",
         "id": "789012",
         "segment_name": "Retail spaces",
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "image": "relevant_image_url.jpg",
+        "image": "https://i.ibb.co/8j4QHYy/pexels-michael-giugliano-2376728.jpg",
         "estate_title": "Modern Warehouse with Loading Docks",
         "id": "345678",
         "segment_name": "Warehouses",
@@ -49,7 +49,7 @@
         ]
     },
     {
-        "image": "relevant_image_url.jpg",
+        "image": "https://i.ibb.co/3h6PF4P/pexels-jimmy-chan-1757231.jpg",
         "estate_title": "Industrial Facility with Manufacturing Capabilities",
         "id": "901234",
         "segment_name": "Industrial facilities",
