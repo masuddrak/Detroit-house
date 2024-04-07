@@ -1,0 +1,67 @@
+[
+    {
+        "image": "relevant_image_url.jpg",
+        "estate_title": "Luxury Office Building in Downtown",
+        "id": "123456",
+        "segment_name": "Office buildings",
+        "description": "This luxury office building stands as a beacon of corporate sophistication amidst the bustling streets of downtown. With its sleek glass façade and modern architecture, it offers a prestigious address for businesses seeking to make a statement. Spanning over 10,000 square feet, the interior is meticulously designed to inspire productivity and foster collaboration. From expansive conference rooms to cozy lounge areas, every detail is crafted to elevate the work experience. High-speed internet ensures seamless connectivity, while 24/7 security provides peace of mind. Located in the vibrant heart of the city's business district, this building offers unparalleled convenience and prestige.",
+        "price": "$5,000,000",
+        "status": "sale",
+        "area": "10,000 sq ft",
+        "location": "Downtown Business District",
+        "facilities": [
+            "Conference rooms",
+            "Lounge areas",
+            "High-speed internet",
+            "24/7 security"
+        ]
+    },
+    {
+        "image": "relevant_image_url.jpg",
+        "estate_title": "Spacious Retail Space in Shopping Mall",
+        "id": "789012",
+        "segment_name": "Retail spaces",
+        "description": "Welcome to the epitome of retail excellence! This spacious retail space nestled within a bustling shopping mall offers an unparalleled opportunity for businesses to thrive. Boasting over 2,000 square feet of prime storefront, it provides ample room to showcase products and attract customers. With its strategic location in the vibrant City Center Mall, foot traffic is guaranteed. The storefront windows flood the space with natural light, creating an inviting ambiance for shoppers. Additionally, a dedicated storage area ensures efficient inventory management, while convenient parking facilities cater to both customers and employees. Seize the opportunity to establish your brand in this dynamic retail environment!",
+        "price": "$10,000/month",
+        "status": "rent",
+        "area": "2,000 sq ft",
+        "location": "City Center Mall",
+        "facilities": [
+            "Storefront windows",
+            "Storage area",
+            "Parking facilities"
+        ]
+    },
+    {
+        "image": "relevant_image_url.jpg",
+        "estate_title": "Modern Warehouse with Loading Docks",
+        "id": "345678",
+        "segment_name": "Warehouses",
+        "description": "Experience the epitome of warehouse efficiency with this modern facility boasting cutting-edge features. Spanning an impressive 50,000 square feet, this warehouse is designed to streamline logistics and enhance productivity. Equipped with state-of-the-art loading docks, it offers seamless transportation and distribution capabilities. Conveniently located in the bustling Industrial Park, it provides easy access to major highways, facilitating smooth supply chain operations. With security cameras ensuring round-the-clock surveillance, your inventory is always protected. Whether you're storing goods or managing distribution, this warehouse is the ideal solution for your business needs.",
+        "price": "$3,500,000",
+        "status": "sale",
+        "area": "50,000 sq ft",
+        "location": "Industrial Park",
+        "facilities": [
+            "Loading docks",
+            "Forklift access",
+            "Security cameras"
+        ]
+    },
+    {
+        "image": "relevant_image_url.jpg",
+        "estate_title": "Industrial Facility with Manufacturing Capabilities",
+        "id": "901234",
+        "segment_name": "Industrial facilities",
+        "description": "Unlock the potential of industrial innovation with this versatile facility designed to meet your manufacturing needs. Encompassing a sprawling 100,000 square feet, this industrial space offers ample room for production, storage, and office operations. Equipped with advanced manufacturing equipment, it empowers you to scale your operations efficiently. Nestled in the heart of the bustling Industrial Zone, it provides easy access to transportation networks, facilitating seamless logistics. With a dedicated warehouse space and office area, all facets of your business are seamlessly integrated. Embrace the future of manufacturing in this dynamic industrial facility!",
+        "price": "$15/sq ft/year",
+        "status": "rent",
+        "area": "100,000 sq ft",
+        "location": "Industrial Zone",
+        "facilities": [
+            "Manufacturing equipment",
+            "Warehouse space",
+            "Office area"
+        ]
+    }
+]
