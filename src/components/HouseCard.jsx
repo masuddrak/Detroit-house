@@ -2,11 +2,12 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 
 
 const HouseCard = ({ house }) => {
-    const { image, estate_title, segment_name, description, price, status, area, location, facilities } = house
+    const { id,image, estate_title, segment_name, description, price, status, area, location, facilities } = house
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl">
@@ -36,7 +37,7 @@ const HouseCard = ({ house }) => {
                         {facilities.map((facilitie, index) => <li key={index}>{facilitie}</li>)}
                     </div>
                     <div className="card-actions ">
-                        <button className="btn bg-blue-800 hover:bg-black text-white">View Property</button>
+                        <Link to={`/houseDetails/${id}`} className="btn bg-blue-800 hover:bg-black text-white">View Property</Link>
                     </div>
                 </div>
             </div>
