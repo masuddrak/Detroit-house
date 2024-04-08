@@ -1,21 +1,43 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { authContext } from "./AuthComponent";
+import { updateProfile } from "firebase/auth";
+import auth from "../Firebase/firebase.config";
 
 
 const Registation = () => {
+    const { createUser } = useContext(authContext)
     const {
         register,
         handleSubmit,
     } = useForm()
-    
-  const heldelRegister = (data) => {
-    console.log(data)
-    const name=data.name
-    const photo=data.photo
-    const email=data.email
-    const password=data.password
-    console.log(name,photo,email,password)
-  }
+
+    const heldelRegister = (data) => {
+        console.log(data)
+        const name = data.name
+        const photo = data.photo
+        const email = data.email
+        const password = data.password
+        console.log(name, photo, email, password)
+        createUser(email, password)
+            .then(result => {
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photo
+                }).then(() => {
+                    // Profile updated!
+                    // ...
+                }).catch((error) => {
+                    // An error occurred
+                    console.log(error)
+                    // ...
+                });
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
     return (
         <div className="flex justify-center min-h-[50vh] mt-10">
             <div className="w-full  max-w-md p-8 space-y-3 rounded-xl  dark:text-gray-800 bg-gray-600 text-white">

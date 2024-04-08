@@ -1,21 +1,42 @@
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { authContext } from "./AuthComponent";
 
 const Login = () => {
+    const {loginUser}=useContext(authContext)
+    const {
+        register,
+        handleSubmit,
+    } = useForm()
+
+    const heldelLogin = (data) => {
+        console.log(data)
+        const email = data.email
+        const password = data.password
+        loginUser(email, password)
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.log(error.message)
+        })
+    }
     return (
         <div className="flex justify-center min-h-[50vh] mt-10">
             <div className="w-full  max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 bg-gray-600 text-white">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
-                <form noValidate="" action="" className="space-y-6">
+                <form onSubmit={handleSubmit(heldelLogin)} className="space-y-6 text-gray-600">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
-                        <input type="email" name="email"  placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                        <input type="email" {...register("email")} placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                        <input type="password" name="password"  placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                        
+                        <input type="password" {...register("password")} placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm bg-blue-800">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm bg-blue-800 text-white">Sign in</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
