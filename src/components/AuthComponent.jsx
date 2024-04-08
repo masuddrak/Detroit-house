@@ -26,10 +26,11 @@ const AuthComponent = ({ children }) => {
         const obseverId = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
             setUserLoader(false)
+        });
             return (() => {
                 obseverId()
             })
-        });
+        
 
     }, [])
 

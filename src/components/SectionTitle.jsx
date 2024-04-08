@@ -1,10 +1,10 @@
-
-const SectionTitle = () => {
+import PropTypes from 'prop-types';
+const SectionTitle = ({mainTitle,subTitle}) => {
     return (
         <div className="flex justify-center mt-20 mb-10">
             <div className="text-center">
-                <p className="text-xl font-bold text-gray-400">DETROIT LISTINGS</p>
-                <h1 className="text-5xl font-bold">LATEST PROPERTIES
+                <p className="text-xl font-bold text-gray-400">{subTitle}</p>
+                <h1 className="text-5xl font-bold">{mainTitle}
                 </h1>
             </div>
         </div>
@@ -12,3 +12,7 @@ const SectionTitle = () => {
 };
 
 export default SectionTitle;
+SectionTitle.propTypes = {
+    mainTitle: PropTypes.string,
+    subTitle: PropTypes.string,
+}

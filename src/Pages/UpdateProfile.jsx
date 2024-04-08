@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { authContext } from "../components/AuthComponent";
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
     const { user } = useContext(authContext)
@@ -11,6 +11,7 @@ const UpdateProfile = () => {
     return (
         <div className=" gap-10 flex justify-center mt-10">
             <div className="text-center space-y-3">
+                <Helmet><title>Profile Update</title></Helmet>
                 <div className="flex justify-center">
                     <img className="w-[60px] rounded-full " src={user?.photoURL} alt="" />
                 </div>

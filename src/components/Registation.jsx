@@ -4,29 +4,46 @@ import { Link } from "react-router-dom";
 import { authContext } from "./AuthComponent";
 import { updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
+import {toast } from 'react-toastify';
+import { useNavigate  } from "react-router-dom";
 
 
 const Registation = () => {
-    const { createUser } = useContext(authContext)
+    const { createUser,setUserLoader } = useContext(authContext)
+    const naviget=useNavigate()
     const {
         register,
         handleSubmit,
     } = useForm()
 
     const heldelRegister = (data) => {
-        console.log(data)
+        const textPassword=/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z]+$/
+        if(!textPassword.test(data.password)){
+            return toast.warning("plase typel uppercas,lowearcase")
+        }
+        if(data.password.length<6){
+            return toast.warning("plase typel must be 6 charecters")
+        }
         const name = data.name
         const photo = data.photo
         const email = data.email
         const password = data.password
-        console.log(name, photo, email, password)
+        // console.log(name, photo, email, password)
+
+
         createUser(email, password)
             .then(result => {
+                setUserLoader(true)
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo
                 }).then(() => {
                     // Profile updated!
                     // ...
+                    
+                    setUserLoader(false)
+                    naviget("/")
+                    return toast.success("Create user Success!!")
+                    
                 }).catch((error) => {
                     // An error occurred
                     console.log(error)

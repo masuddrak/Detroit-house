@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { IoLocationOutline } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
 import { useLoaderData, } from "react-router-dom";
+import {Helmet} from "react-helmet";
 const HouseCardDetails = () => {
     const { id } = useParams()
     const allHouse = useLoaderData();
@@ -43,6 +44,7 @@ const HouseCardDetails = () => {
                 {/* details body */}
                 <div className='mt-10'>
                     <div>
+                    <Helmet> <title>{estate_title}</title></Helmet>
                         <h3 className='text-xl font-bold text-gray-400'>Segment_name: <span className='text-xl'>{segment_name}</span></h3>
                         <h3 className='text-2xl font-bold mt-2'>Estate_title: {estate_title}</h3>
                         <div className="  font-semibold flex items-center gap-2 text-gray-400">
