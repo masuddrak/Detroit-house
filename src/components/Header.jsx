@@ -5,6 +5,7 @@ const Header = () => {
     const navlinks=<>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/contact">Contact</NavLink></li>
+    <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
     </>
     return (
         <div>
@@ -26,7 +27,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to="/login" className="btn">Login</Link>
                 </div>
             </div>
         </div>
