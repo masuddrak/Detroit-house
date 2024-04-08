@@ -6,6 +6,8 @@ import HouseCardDetails from "../components/HouseCardDetails";
 import UpdateProfile from "../Pages/UpdateProfile";
 import Login from "../components/Login";
 import Registation from "../components/Registation";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import UpdateUserProfile from "../components/UpdateUserProfile";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +21,11 @@ const router = createBrowserRouter([
         },
         {
           path:"/updateProfile",
-          element:<UpdateProfile></UpdateProfile>
+          element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+        },
+        {
+          path:"/updateUserProfile",
+          element:<PrivateRoute><UpdateUserProfile></UpdateUserProfile></PrivateRoute>
         },
         {
           path:"/login",
@@ -31,7 +37,7 @@ const router = createBrowserRouter([
         },
         {
           path:"/houseDetails/:id",
-          element:<HouseCardDetails></HouseCardDetails>,
+          element:<PrivateRoute><HouseCardDetails></HouseCardDetails></PrivateRoute>,
           loader:()=>fetch("/hous.json")
         },
         {

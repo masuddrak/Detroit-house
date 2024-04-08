@@ -9,6 +9,7 @@ export const authContext = createContext()
 const AuthComponent = ({ children }) => {
     const [userLoader, setUserLoader] = useState(true)
     const [user, setUser] = useState(null)
+
     const createUser = (email, password) => {
         setUserLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -16,7 +17,6 @@ const AuthComponent = ({ children }) => {
     const loginUser = (email, password) => {
         setUserLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
-
     }
     const logoutUser = (auth) => {
         setUserLoader(true)
@@ -34,7 +34,7 @@ const AuthComponent = ({ children }) => {
     }, [])
 
 
-    const authInfo = { createUser, loginUser, logoutUser, user,userLoader, setUserLoader }
+    const authInfo = { createUser, loginUser, logoutUser, user, userLoader, setUserLoader }
     return (
         <authContext.Provider value={authInfo}>
             {children}

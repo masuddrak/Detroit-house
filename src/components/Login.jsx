@@ -2,8 +2,11 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { authContext } from "./AuthComponent";
-
+import { useNavigate  ,useLocation } from "react-router-dom";
 const Login = () => {
+    const location=useLocation()
+    const naviget=useNavigate()
+    console.log(location)
     const {loginUser}=useContext(authContext)
     const {
         register,
@@ -17,6 +20,7 @@ const Login = () => {
         loginUser(email, password)
         .then(result=>{
             console.log(result.user)
+            naviget(location?.state?location.state:"/")
         })
         .catch(error=>{
             console.log(error.message)
