@@ -54,7 +54,7 @@ const Registation = () => {
                 console.log(result.user)
             })
             .catch(error => {
-                console.log(error.message)
+                toast.warning(error.message)
             })
     }
     // google,github sigin  

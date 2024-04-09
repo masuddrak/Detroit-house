@@ -27,12 +27,12 @@ const Home = () => {
             <Banner></Banner>
             {/*section title  */}
             <SectionTitle subTitle={"DETROIT LISTINGS"} mainTitle={"LATEST PROPERTIES"}></SectionTitle>
-            <div className="grid md:grid-cols-3   gap-10">
+            <div className="grid md:grid-cols-2  lg:grid-cols-3   gap-10">
                 {allHouse.map(house => <HouseCard key={house.id} house={house}></HouseCard>)}
             </div>
             {/*section title  */}
             <SectionTitle subTitle={"DETROIT REAL ESTATE"} mainTitle={"OUR SERVICES"}></SectionTitle>
-            <div className="grid md:grid-cols-3 gap-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <Services mainTitle={"SELL SPACES"} icon={<FaHandsHelping />} subTitle={"We do a free evaluation to be sure you want to start selling."}></Services>
 
                 <Services mainTitle={"RENT SPACES"} icon={<IoSettingsOutline />} subTitle={"We do a free evaluation to be sure you want to start selling."}></Services>

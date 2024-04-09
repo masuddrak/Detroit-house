@@ -18,7 +18,7 @@ const HouseCardDetails = () => {
         <div >
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
                 <div className="flex flex-col w-full items-center  overflow-hidden rounded">
-                    <img src={image} alt="" className="w-full md:min-h-[50vh] object-cover sm:h-96 dark:bg-gray-500" />
+                    <img src={image} alt="" className="w-full min-h-[30vh] md:min-h-[50vh] object-cover sm:h-96 dark:bg-gray-500" />
                     <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 w-full lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-blue-800 text-white">
                         <div className='grid grid-cols-2  md:grid-cols-4 md:gap-10'>
                             <div>

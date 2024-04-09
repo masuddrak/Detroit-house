@@ -11,7 +11,7 @@ AOS.init();
 const Layout = () => {
     return (
         <div >
-            <div className="md:w-4/5 md:mx-auto mx-3">
+            <div className="md:container  md:mx-auto mx-3">
                 <Header></Header>
                 <Outlet></Outlet>
                 <Footer></Footer>

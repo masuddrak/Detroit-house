@@ -16,7 +16,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 
 const OurAgent = () => {
     return (
-        <div className="grid md:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="card  bg-base-100 shadow-xl">
                 <figure><img src={person1} alt="Shoes" /></figure>
                 <div className="p-2">

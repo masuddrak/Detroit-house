@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
-    const { user } = useContext(authContext)
+    const { user} = useContext(authContext)
 
     console.log("update user", user)
+    
+   
 
     return (
         <div className=" gap-10 flex justify-center mt-10">

@@ -17,6 +17,7 @@ const UpdateUserProfile = () => {
         updateProfile(auth.currentUser, {
            
             displayName: name, photoURL: photo
+            
         }).then(() => {
             setUserLoader(true)
             // Profile updated!
