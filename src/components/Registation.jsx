@@ -88,13 +88,14 @@ const Registation = () => {
                         <input type="text" {...register("name")} placeholder="Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
                     <div className="space-y-1 text-sm">
+                        <label htmlFor="email" className="block dark:text-gray-600">Email</label>
+                        <input type="email" {...register("email")} placeholder="Email"  className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                    </div>
+                    <div className="space-y-1 text-sm">
                         <label htmlFor="text" className="block dark:text-gray-600">Photo</label>
                         <input type="text" {...register("photo")} placeholder="photo url" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
-                    <div className="space-y-1 text-sm">
-                        <label htmlFor="email" className="block dark:text-gray-600">Email</label>
-                        <input type="email" {...register("email")} placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                    </div>
+
 
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block dark:text-gray-600">Password</label>
@@ -103,7 +104,7 @@ const Registation = () => {
                             <span onClick={() => setHiddenPass(!hiddenPass)} className=" text-2xl absolute right-1 top-2"><IoEyeSharp></IoEyeSharp></span>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm bg-blue-800 text-white">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm bg-blue-800 text-white">Sign Up</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>

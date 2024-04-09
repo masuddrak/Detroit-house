@@ -1,8 +1,24 @@
-# React + Vite
+# DETROIT House
+[Live Link](https://detroit-house.web.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DETROIT House features
+- User Friendly Navbar
+- Show card  all info product
+- Product details page 
+- Fully resposive website
+- Contat info containe DETROIT House
 
-Currently, two official plugins are available:
+# added some react plugins 
+- react-prop-types
+- react-helmet
+- react-hook-form
+- react-icons
+- react-router-dom
+- react-toastify
+- aos
+- swiper
+- firebase
+- etc
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+

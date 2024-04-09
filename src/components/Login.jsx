@@ -65,7 +65,7 @@ const Login = () => {
                         <input type="password" {...register("password")} placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm bg-blue-800 text-white">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm bg-blue-800 text-white">Login</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
