@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
 
 
@@ -9,7 +9,16 @@ export const authContext = createContext()
 const AuthComponent = ({ children }) => {
     const [userLoader, setUserLoader] = useState(true)
     const [user, setUser] = useState(null)
-
+    // provider authentication
+    const gooleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    const createGooleUser=()=>{
+        return signInWithPopup(auth, gooleProvider)
+    }
+    const createGithubUser=()=>{
+        return signInWithPopup(auth, githubProvider)
+    }
+    // email password
     const createUser = (email, password) => {
         setUserLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -27,15 +36,15 @@ const AuthComponent = ({ children }) => {
             setUser(currentUser)
             setUserLoader(false)
         });
-            return (() => {
-                obseverId()
-            })
-        
+        return (() => {
+            obseverId()
+        })
+
 
     }, [])
 
 
-    const authInfo = { createUser, loginUser, logoutUser, user, userLoader, setUserLoader }
+    const authInfo = { createUser, loginUser, logoutUser,createGooleUser,createGithubUser, user, userLoader, setUserLoader }
     return (
         <authContext.Provider value={authInfo}>
             {children}

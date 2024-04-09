@@ -10,7 +10,7 @@ const HouseCard = ({ house }) => {
     const { id,image, estate_title, segment_name, description, price, status, area, location, facilities } = house
     return (
         <div>
-            <div className="card card-compact  bg-base-100 shadow-xl">
+            <div data-aos="flip-left" className="card card-compact  bg-base-100 shadow-xl">
                 <figure><div style={{ backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})` }} className=" min-h-[30vh] w-full bg-center bg-no-repeat  bg-cover bg-slate-900	rounded-md relative">
                     <div className='m-3  '>
                         <div className="flex justify-between">

@@ -7,7 +7,7 @@ import { useNavigate  } from "react-router-dom";
 import {Helmet} from "react-helmet";
 const UpdateUserProfile = () => {
     
-    const {user}=useContext(authContext)
+    const {user,setUserLoader}=useContext(authContext)
     const naviget=useNavigate()
     const handelUpdateProfile = (e) => {
         e.preventDefault()
@@ -15,11 +15,14 @@ const UpdateUserProfile = () => {
         const photo = e.target.photo.value
         console.log(photo, name)
         updateProfile(auth.currentUser, {
+           
             displayName: name, photoURL: photo
         }).then(() => {
+            setUserLoader(true)
             // Profile updated!
             // ...
             naviget("/updateProfile")
+            setUserLoader(false)
         }).catch(() => {
             // An error occurred
             // ...

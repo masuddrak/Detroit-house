@@ -8,11 +8,13 @@ import Login from "../components/Login";
 import Registation from "../components/Registation";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdateUserProfile from "../components/UpdateUserProfile";
+import NotFoundPage from "../components/NotFoundPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout></Layout>,
+      errorElement: <NotFoundPage />,
       children:[
         {
           path:"/",
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
         },
         {
           path:"/contact",
-          element:<Contact></Contact>
+          element:<PrivateRoute><Contact></Contact></PrivateRoute>
         }
       ]
     },
