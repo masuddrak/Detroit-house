@@ -13,7 +13,7 @@ const UpdateProfile = () => {
             <div className="text-center space-y-3">
                 <Helmet><title>Profile Update</title></Helmet>
                 <div className="flex justify-center">
-                    <img className="w-[60px] rounded-full " src={user?.photoURL} alt="" />
+                    <img className="w-[60px] h-[60px] rounded-full " src={user?.photoURL} alt="" />
                 </div>
                 <h3 className="text-xl"><span className="font-bold">Name:</span> {user?.displayName}</h3>
                 <h3 className="text-xl"><span className="font-bold">Email:</span>{user?.email}</h3>

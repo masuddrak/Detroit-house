@@ -51,7 +51,7 @@ const HouseCardDetails = () => {
                             <IoLocationOutline></IoLocationOutline>
                             <p>{location}</p>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="md:flex items-center gap-3">
                             <span className='text-xl font-bold text-gray-400'> Facilitie: </span>
                             {facilities?.map((facilitie, index) => <p key={index}>{facilitie}</p>)}
                         </div>
