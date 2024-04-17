@@ -3,22 +3,25 @@ import { updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
 import { useContext } from "react";
 import { authContext } from "./AuthComponent";
-import { useNavigate  } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 const UpdateUserProfile = () => {
-    
-    const {user,setUserLoader}=useContext(authContext)
-    const naviget=useNavigate()
+
+    const { user, setUserLoader, setUser } = useContext(authContext)
+    const naviget = useNavigate()
     const handelUpdateProfile = (e) => {
         e.preventDefault()
         const name = e.target.name.value
         const photo = e.target.photo.value
         console.log(photo, name)
         updateProfile(auth.currentUser, {
-           
+
             displayName: name, photoURL: photo
-            
+
         }).then(() => {
+            setUser({
+                ...user, displayName: name, photoURL: photo
+            })
             setUserLoader(true)
             // Profile updated!
             // ...
@@ -32,7 +35,7 @@ const UpdateUserProfile = () => {
     return (
         <div className="  flex justify-center mt-10">
             <div className="md:w-1/5 w-full bg-gray-600 p-6">
-            <Helmet> <title>Eidt Profile</title></Helmet>
+                <Helmet> <title>Eidt Profile</title></Helmet>
                 <h2 className="text-2xl font-bold my-3 text-center">Update User </h2>
                 <form onSubmit={handelUpdateProfile} className="space-y-6 text-white">
                     <div className="space-y-1 text-sm">
